@@ -6,13 +6,9 @@ print("/_______  /\_/  (____  /____/____/(____  /__|  \___  >  \___>__/\_ \|    
 print("        \/            \/               \/          \/       \/    \/|__|               \/     \/     \/             \/                        \/     \/                    \/   \/  ")
 print("By Vincent Lin\n")
 
-print("Enter Exponential_Function() to begin")
 
 
-def Exponential_Function():
-
-    print("do you want to learn about the warning of this calculator?")
-       
+def Exponential_Function():       
 
     def Exponential_Function_Calculator():
 
@@ -21,33 +17,32 @@ def Exponential_Function():
             x = int(input("Enter Value for x\n"))
             z = int(input("Enter Value for z\n"))
 
-
             Y = b ** x
             X = Y * y
             answer = X + z
             if(answer < 1):
                 answer2 = format( answer, ".3f" )
                 answer3 = (answer2 * 1000) 
-                print( answer3 + "/1000" )
+                print( answer3, "/1000" )
             else:
-                print(answer + "is the answer")
+                print(answer, "is the answer")
 
     def Exponential_Function_Warning():
 
             print("The Formula for Exponential Functions is... a(x)=y*b^x+z")
             print("if y doesnt exist substitute it with 1")
             print("if z doesnt exist substitue it with 0")
-            print("if this is the correct formula enter Exponential_Function_Calculator() to continue")
-            prompt2 = raw_input("Continue?\n")
-            if prompt2 == "Exponential_Function_Calculator()":
+            prompt2 = input("Continue?(yes/no) \n")
+            if prompt2 == 'yes':
                 Exponential_Function_Calculator()
             else:
                 Exponential_Function()
             
-
-    prompt1 = raw_input('yes or no\n')
+    print("do you want to learn about the warning of this calculator?")
+    prompt1 = input('yes or no\n')
     if prompt1 == 'yes':
             Exponential_Function_Warning()
     if prompt1 == 'no':
         Exponential_Function_Calculator()
-    
+        
+Exponential_Function()
